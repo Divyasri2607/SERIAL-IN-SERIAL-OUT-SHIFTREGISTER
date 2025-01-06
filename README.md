@@ -2,7 +2,7 @@
 
 **AIM:**
 
-To implement  SISO Shift Register using verilog and validating their functionality using their functional tables
+To implement SISO Shift Register using verilog and validating their functionality using their functional tables
 
 **SOFTWARE REQUIRED:**
 
@@ -23,63 +23,47 @@ Figure 01 4 Bit SISO Register
 The synchronous nature of the flip-flops ensures that the shifting of data occurs in a coordinated manner. When the clock signal rises, the input data is sampled and stored in the first flip-flop. On subsequent clock pulses, the stored data propagates through the flip-flops, moving from one flip-flop to the next.
 Each D flip-flop in the circuit has a Data (D) input, a Clock (CLK) input, and an output (Q). The D input represents the data to be loaded into the flip-flop, while the CLK input is connected to the common clock signal. The output (Q) of each flip-flop is connected to the D input of the next flip-flop, forming a cascade.
 
+![WhatsApp Image 2024-12-21 at 08 38 43_a1cb37d5](https://github.com/user-attachments/assets/d28a8514-f7af-4225-85dd-28497a172f6f)
+
+
 **Procedure**
 
-/* write all the steps invloved */
-
-Type the program in Quartus software.
-
-Compile and run the program.
-
-Generate the RTL schematic and save the logic diagram.
-
-Create nodes for inputs and outputs to generate the timing diagram.
-
-For different input combinations generate the timing diagram.
-
+1. Type the program in Quartus software.
+2. Compile and run the program.
+3. Generate the RTL schematic and save the logic diagram.
+4. Create nodes for inputs and outputs to generate the timing diagram.
+5. For different input combinations generate the timing diagram.
+   
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming.
+/* Program for  SISO Shift Register and verify its truth table in quartus using Verilog programming.
+
 ```
 module EXP10(clk, sin, q);
-
 input clk;
-
 input sin;
-
 output [3:0] q;
-
 reg [3:0] q;
-
 always @(posedge clk)
-
 begin
-
 q[0] <= sin;
-
 q[1] <= q[0];
-
 q[2] <= q[1];
-
 q[3] <= q[2];
-
 end
-
 endmodule
 ```
-```
 
-Developed by:V.Divya Sri
-RegisterNumber:24901155
-```
-*/
+Developed by: Divya Sri V RegisterNumber: 24901155
 
 **RTL LOGIC FOR SISO Shift Register**
-![WhatsApp Image 2024-12-13 at 19 34 57_cc736270](https://github.com/user-attachments/assets/7e4ae051-a94b-48d7-b551-28bdf613c8d1)
 
+![Screenshot 2024-12-23 001154](https://github.com/user-attachments/assets/6010d6d0-f01f-4740-abc3-67774b825d90)
 
-**TIMING DIGRAMS FOR SISO Shift Register**
-![WhatsApp Image 2024-12-13 at 19 34 58_4f1d662a](https://github.com/user-attachments/assets/5c9c7dc5-89fa-4b5f-b5d4-fc5dc55882bc)
+**TIMING DIGRAM FOR SISO Shift Register**
 
-**RESULTS**
-successfully implemented SISO Shift Register using verilog and validating their functionality using their functional tables
+![Screenshot 2024-12-23 001417](https://github.com/user-attachments/assets/85afdacf-1031-4e61-8995-49c3850d2175)
+
+**RESULT**
+
+Thus implemented a SISO Shift Register using verilog and validated their functionality using their functional table
